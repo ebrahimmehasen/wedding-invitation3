@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation</title>
+    <meta name="description" content="You are cordially invited to celebrate our wedding day.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@200;300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ===================== INTRO OVERLAY ===================== -->
+    <div class="intro-screen" id="intro-screen">
+        <div class="intro-content">
+            <h2 class="intro-names anim-intro-text">C <span class="intro-amp">&</span> R</h2>
+            <p class="intro-text anim-intro-text" style="animation-delay: 0.5s">Welcome to our beginning</p>
+            
+            <button id="enter-btn" class="elegant-btn anim-intro-text" style="animation-delay: 1s; margin-top: 2rem; cursor: pointer; padding: 0.8rem 2.5rem; background: rgba(255,255,255,0.2);">
+                <span class="btn-text">Open Invitation 💌</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Falling Stars background -->
+    <div class="stars-container" id="stars-container"></div>
+
+    <!-- ===================== SECTION 1: HERO ===================== -->
+    <section class="hero-section">
+
+        <!-- Video Background -->
+        <div class="video-wrapper">
+            <video id="bg-video" loop playsinline preload="auto">
+                <source src="video.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+
+        <!-- Sound toggle button -->
+        <button class="sound-btn" id="sound-btn" aria-label="Toggle Sound">
+            <span class="sound-icon" id="sound-icon">🔇</span>
+            <span class="sound-label" id="sound-label">Sound Off</span>
+        </button>
+
+        <!-- Decorative corner ornaments -->
+        <div class="corner-ornament top-left">❧</div>
+        <div class="corner-ornament top-right">❧</div>
+
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <div class="pre-title anim-cinematic-up">✦ &nbsp; We're Getting Married &nbsp; ✦</div>
+
+            <div class="names-block">
+                <h1 id="bride-name" class="name anim-blur-in" style="--n-delay: 0.8s">CLAUDIA</h1>
+                <div class="and-divider anim-fade-in-delayed">
+                    <span class="line"></span>
+                    <span class="and-word">And</span>
+                    <span class="line"></span>
+                </div>
+                <h1 id="groom-name" class="name anim-blur-in" style="--n-delay: 1.2s">RICHARD</h1>
+            </div>
+
+            <!-- Scroll indicator -->
+            <div class="scroll-indicator anim-fade-in-delay">
+                <span>Scroll</span>
+                <div class="scroll-arrow">
+                    <div class="chevron"></div>
+                    <div class="chevron"></div>
+                    <div class="chevron"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SECTION 2: DETAILS ===================== -->
+    <section class="details-section" id="details-section">
+
+        <!-- Decorative SVG floral top divider -->
+        <div class="section-divider">
+            <svg viewBox="0 0 600 40" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <line x1="0" y1="20" x2="230" y2="20" stroke="#c9b8a8" stroke-width="0.8"/>
+                <text x="300" y="26" text-anchor="middle" font-size="20" fill="#c9b8a8" font-family="serif">✦</text>
+                <line x1="370" y1="20" x2="600" y2="20" stroke="#c9b8a8" stroke-width="0.8"/>
+            </svg>
+        </div>
+
+        <!-- Background flower image -->
+        <div class="flower-bg" id="flower-bg"></div>
+        <div class="flower-bg-overlay"></div>
+
+        <!-- Details card -->
+        <div class="details-card reveal-up">
+
+            <!-- Date row -->
+            <div class="date-row reveal-child" style="--delay: 0.1s">
+                <div class="date-col">
+                    <span id="display-day-name" class="date-upper">SUNDAY</span>
+                    <div class="date-rule"></div>
+                    <span id="display-time" class="date-lower">09.00</span>
+                </div>
+
+                <div class="date-number-wrapper">
+                    <div id="display-day-number" class="date-number">03</div>
+                    <div class="date-number-ring"></div>
+                </div>
+
+                <div class="date-col">
+                    <span id="display-month-name" class="date-upper">JANUARY</span>
+                    <div class="date-rule"></div>
+                    <span id="display-year" class="date-lower">2025</span>
+                </div>
+            </div>
+
+            <!-- Ornament separator -->
+            <div class="ornament-row reveal-child" style="--delay: 0.2s">
+                <span class="ornament-line"></span>
+                <span class="ornament-symbol">✦</span>
+                <span class="ornament-line"></span>
+            </div>
+
+            <!-- Countdown -->
+            <div class="countdown-row reveal-child" style="--delay: 0.3s">
+                <div class="countdown-box">
+                    <div class="count-num" id="days">00</div>
+                    <div class="count-label">Days</div>
+                </div>
+                <div class="count-sep">:</div>
+                <div class="countdown-box">
+                    <div class="count-num" id="hours">00</div>
+                    <div class="count-label">Hours</div>
+                </div>
+                <div class="count-sep">:</div>
+                <div class="countdown-box">
+                    <div class="count-num" id="minutes">00</div>
+                    <div class="count-label">Mins</div>
+                </div>
+                <div class="count-sep">:</div>
+                <div class="countdown-box">
+                    <div class="count-num" id="seconds">00</div>
+                    <div class="count-label">Secs</div>
+                </div>
+            </div>
+
+            <!-- Ornament separator -->
+            <div class="ornament-row reveal-child" style="--delay: 0.4s">
+                <span class="ornament-line"></span>
+                <span class="ornament-symbol">✦</span>
+                <span class="ornament-line"></span>
+            </div>
+
+            <!-- Location -->
+            <div class="location-wrapper reveal-child" style="--delay: 0.5s">
+                <p id="location-address" class="location-text">123 Anywhere St., Any City, ST 12345</p>
+                <a href="#" id="location-btn" target="_blank" class="elegant-btn">
+                    <span class="btn-text">View Map <span class="btn-icon">📍</span></span>
+                </a>
+            </div>
+
+            <p id="reception-text" class="reception-text reveal-child" style="--delay: 0.6s">Reception to follow</p>
+
+        </div>
+    </section>
+
+    <!-- ===================== SECTION 3: RSVP ===================== -->
+    <section class="rsvp-section" id="rsvp-section">
+        <div class="rsvp-bg-overlay"></div>
+        <div class="rsvp-card reveal-up">
+
+            <div class="rsvp-header">
+                <p class="rsvp-eyebrow reveal-child" style="--delay:0.1s">✦ &nbsp; Kindly Reply By &nbsp; ✦</p>
+                <h2 class="rsvp-title reveal-child" style="--delay:0.2s">RSVP</h2>
+                <p class="rsvp-subtitle reveal-child" style="--delay:0.3s" id="rsvp-deadline">Please respond before December 15, 2024</p>
+            </div>
+
+            <form class="rsvp-form reveal-child" style="--delay:0.4s" id="rsvp-form" novalidate>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="rsvp-name">Full Name</label>
+                        <input type="text" id="rsvp-name" placeholder="Your full name" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="rsvp-email">Email Address</label>
+                        <input type="email" id="rsvp-email" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="rsvp-phone">Phone Number</label>
+                        <input type="tel" id="rsvp-phone" placeholder="+1 234 567 890">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Will you be attending?</label>
+                        <div class="radio-group">
+                            <label class="radio-card">
+                                <input type="radio" name="attendance" value="yes" required>
+                                <span class="radio-inner">
+                                    <span class="radio-emoji">🥂</span>
+                                    <span>Joyfully Accept</span>
+                                </span>
+                            </label>
+                            <label class="radio-card">
+                                <input type="radio" name="attendance" value="no">
+                                <span class="radio-inner">
+                                    <span class="radio-emoji">💌</span>
+                                    <span>Regretfully Decline</span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row" id="guest-row">
+                    <div class="form-group">
+                        <label for="rsvp-guests">Number of Guests</label>
+                        <select id="rsvp-guests">
+                            <option value="1">1 Guest (Just me)</option>
+                            <option value="2">2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="rsvp-meal">Meal Preference</label>
+                        <select id="rsvp-meal">
+                            <option value="">Select preference</option>
+                            <option value="standard">Standard</option>
+                            <option value="vegetarian">Vegetarian</option>
+                            <option value="vegan">Vegan</option>
+                            <option value="gluten-free">Gluten Free</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="rsvp-message">Message for the Couple <span class="optional">(optional)</span></label>
+                        <textarea id="rsvp-message" rows="3" placeholder="Write a heartfelt message..."></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="rsvp-submit-btn" id="rsvp-submit">
+                    <span class="btn-text">Send RSVP ✦</span>
+                    <span class="btn-shimmer"></span>
+                </button>
+
+            </form>
+
+            <!-- Success message (hidden by default) -->
+            <div class="rsvp-success" id="rsvp-success" style="display:none">
+                <div class="success-icon">🌸</div>
+                <h3>Thank You!</h3>
+                <p>We're so happy you'll be celebrating with us.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
